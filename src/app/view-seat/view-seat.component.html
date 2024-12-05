@@ -1,8 +1,22 @@
 <div class="seat-container">
     <h2>View Seats</h2>
     <div class="coach">
-        <div *ngFor="let seat of seats" class="seat" [ngClass]="{ booked: seat.booked }">
+        <div *ngFor="let seat of seats" class="seat" [ngClass]="{ booked: seat.booked }" (click)="selectSeat(seat)"
+            title="Click to view details">
             {{ seat.id }}
+        </div>
+    </div>
+
+    <!-- Seat Details Modal -->
+    <div *ngIf="selectedSeat" class="modal">
+        <div class="modal-content">
+            <h3>Seat Details</h3>
+            <p><strong>Seat Number:</strong> {{ selectedSeat.id }}</p>
+            <p><strong>Booked By:</strong> {{ selectedSeat.details?.name }}</p>
+            <p><strong>Email:</strong> {{ selectedSeat.details?.email }}</p>
+            <p><strong>Phone:</strong> {{ selectedSeat.details?.phone }}</p>
+            <button (click)="cancelBooking(selectedSeat.id)">Cancel Booking</button>
+            <button (click)="selectedSeat = null">Close</button>
         </div>
     </div>
 </div>

@@ -1,3 +1,4 @@
+/* Seat Styling */
 .seat-container {
     text-align: center;
     padding: 20px;
@@ -21,10 +22,62 @@
     border: 1px solid #ddd;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .seat.booked {
     background-color: #ff6b6b;
     color: white;
-    cursor: not-allowed;
+}
+
+.seat:hover {
+    background-color: #e0e0e0;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.modal-content {
+    text-align: left;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-content button:first-of-type {
+    background-color: #d9534f;
+    color: white;
+}
+
+.modal-content button:first-of-type:hover {
+    background-color: #c9302c;
+}
+
+.modal-content button:last-of-type {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.modal-content button:last-of-type:hover {
+    background-color: #31b0d5;
 }
