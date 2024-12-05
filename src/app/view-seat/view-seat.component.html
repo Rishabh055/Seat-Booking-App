@@ -1,0 +1,8 @@
+<div class="seat-container">
+    <h2>View Seats</h2>
+    <div class="coach">
+        <div *ngFor="let seat of seats" class="seat" [ngClass]="{ booked: seat.booked }">
+            {{ seat.id }}
+        </div>
+    </div>
+</div>

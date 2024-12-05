@@ -1,0 +1,30 @@
+.seat-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.coach {
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.seat.booked {
+    background-color: #ff6b6b;
+    color: white;
+    cursor: not-allowed;
+}
